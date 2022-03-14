@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
-use App\Model\Project;
+use App\Project;
 use App\User;
 
 class ProjectSeeder extends Seeder
@@ -25,10 +25,10 @@ class ProjectSeeder extends Seeder
         $i=0;
 
         foreach ($projects as $project) {
-            $newProject = new Projects();
+            $newProject = new Project();
             $newProject->name = $project['name'];
             $newProject->description = $project['description'];
-            $newProjects->image = $project['image'];
+            $newProject->image = $project['image'];
             $name = "$newProject->name-$i";
             $newProject->slug = Str::slug($name, '-');
             $newProject->user_id = User::first()->id;
