@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('v1/projects', 'Api\ProjectController@index');
+Route::get('v1/projects/{id}', 'Api\ProjectController@show');
+Route::post('v1/contacts', 'Api\ContactController@store');
