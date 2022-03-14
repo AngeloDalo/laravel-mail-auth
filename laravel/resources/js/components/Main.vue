@@ -1,4 +1,4 @@
-<!-- visualizzazione dei post -->
+<!-- visualizzazione dei projects -->
 <template>
 <div>
     Projects

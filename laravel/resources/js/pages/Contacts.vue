@@ -33,7 +33,7 @@
 
 <script>
 export default {
-     name:"contact",
+     name:"contacts",
      data(){
          return {
              name: null,
@@ -48,7 +48,7 @@ export default {
          sendForm(){
              this.sending = true;
              this.success = false;
-             axios.post('/api/contacts',
+             axios.post('/api/v1/contacts',
              {
                'name': this.name,
                'email': this.email,
