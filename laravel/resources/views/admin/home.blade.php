@@ -13,8 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1>
+                            Welcome {{ Auth::user()->name }}
+                        </h1>
+                        <a class="btn btn-primary mt-5" href="{{ route('admin.projects.index') }}">All Projects</a>
+                    </div>
                 </div>
             </div>
         </div>
