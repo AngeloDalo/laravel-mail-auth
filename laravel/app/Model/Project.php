@@ -42,4 +42,3 @@ class Project extends Model
         return (empty($newSlug)) ? $slug : $newSlug;
     }
 }
-

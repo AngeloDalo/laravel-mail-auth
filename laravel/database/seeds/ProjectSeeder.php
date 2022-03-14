@@ -1,8 +1,10 @@
+es (36 sloc)  955 Bytes
+   
 <?php
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
-use App\Project;
+use App\Model\Project;
 use App\User;
 
 class ProjectSeeder extends Seeder
