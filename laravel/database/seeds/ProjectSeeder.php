@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use App\Model\Project;
+use App\User;
 
 class ProjectSeeder extends Seeder
 {
@@ -11,6 +14,27 @@ class ProjectSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $projects = [
+            [
+                'name' => 'Gym',
+                'description' => 'HTML, CSS, JS, VUE',
+                'image' => '',
+            ],
+        ]; 
+
+        $i=0;
+
+        foreach ($projects as $project) {
+            $newProject = new Projects();
+            $newProject->name = $project['name'];
+            $newProject->description = $project['description'];
+            $newProjects->image = $project['image'];
+            $name = "$newProject->name-$i";
+            $newProject->slug = Str::slug($name, '-');
+            $newProject->user_id = User::first()->id;
+            $newProject->fill($project);
+            $newProject->save();
+            $i=$i+1;
+        }
     }
 }
