@@ -116,7 +116,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\LARAVEL\14_03_2022\laravel-mail-auth\laravel\node_modules\popper.js\dist\popper.js */"./node_modules/popper.js/dist/popper.js");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\LARAVEL\14_03_2022_email\laravel-mail-auth\laravel\node_modules\popper.js\dist\popper.js */"./node_modules/popper.js/dist/popper.js");
 
 
 /***/ })

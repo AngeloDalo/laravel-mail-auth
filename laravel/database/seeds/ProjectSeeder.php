@@ -22,6 +22,11 @@ class ProjectSeeder extends Seeder
                 'description' => 'HTML, CSS, JS, VUE',
                 'image' => '',
             ],
+            [
+                'name' => 'Spotify',
+                'description' => 'HTML, CSS, JS',
+                'image' => '',
+            ],
         ]; 
 
         $i=0;

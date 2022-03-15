@@ -18,7 +18,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc');
+        $projects = Project::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
         return view('admin.projects.index', ['projects' => $projects]);
     }
 
@@ -70,7 +70,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Project $project)
     {
         return view('admin.projects.show', ['project' => $project]);
     }
@@ -81,7 +81,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
         if (Auth::user()->id != $project->user_id) {
             abort('403');
@@ -97,7 +97,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Project $project)
     {
         $data = $request->all();
 
