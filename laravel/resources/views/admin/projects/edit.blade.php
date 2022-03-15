@@ -24,7 +24,7 @@
                     <div class="mb-3 mt-3">
                         <label for="name" class="form-label text-uppercase fw-bold">Name</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{ $project->name }}">
-                        @error('nome')
+                        @error('name')
                           <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>

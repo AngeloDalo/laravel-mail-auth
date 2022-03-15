@@ -20,7 +20,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">Nome</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Description</th>
                         <th scope="col">Azioni</th>
                     </tr>

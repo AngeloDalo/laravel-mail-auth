@@ -5,7 +5,7 @@
     </div>
     <form @submit.prevent="sendForm">
         <div class="form-group">
-            <label for="name">Nome</label>
+            <label for="name">Name</label>
             <input v-model="name" type="text" class="form-control" id="name" name="name">
             <p class="alert alert-danger" v-for="(error, index) in errors.name" :key="index">
                 {{ error }}

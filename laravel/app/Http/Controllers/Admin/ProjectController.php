@@ -58,7 +58,7 @@ class ProjectController extends Controller
 
         $project = new Project();
         $project->fill($data);
-        $project->slug = $project->createSlug($data['nome']);
+        $project->slug = $project->createSlug($data['name']);
         $project->save();
 
         return redirect()->route('admin.projects.show', $project->slug);
@@ -102,7 +102,7 @@ class ProjectController extends Controller
         $data = $request->all();
 
         //vedere se comic che andiamo a modificare è dell'utente
-        if (Auth::user()->id != $comic->user_id) {
+        if (Auth::user()->id != $project->user_id) {
             abort('403');
         }
 
@@ -127,9 +127,9 @@ class ProjectController extends Controller
             $project->image = $img_path;
         }
         
-        $comic->update();
+        $project->update();
 
-        return redirect()->route('admin.project.show', $project->slug);  
+        return redirect()->route('admin.projects.show', $project->slug);  
     }
 
     /**
@@ -147,6 +147,6 @@ class ProjectController extends Controller
         
         $project->delete();
         //il with serve per il messaggio
-        return redirect()->route('admin.projects.index')->with('status', "project id $comic->id deleted");
+        return redirect()->route('admin.projects.index')->with('status', "project id $project->id deleted");
     }
 }
