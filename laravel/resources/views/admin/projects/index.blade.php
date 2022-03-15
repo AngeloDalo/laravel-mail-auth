@@ -29,7 +29,7 @@
                     @foreach ($projects as $project)
                             <tr>
                                 <td>{{ $project->name }}</td>
-                                <td>{{ $project->decription }}</td>
+                                <td>{{ $project->description }}</td>
                                 <td>{{ $project->updated_at }}</td>
                                 <td><a class="btn btn-primary" href="{{ route('admin.projects.show', $project->slug) }}">View</a></td>
                                 <td>

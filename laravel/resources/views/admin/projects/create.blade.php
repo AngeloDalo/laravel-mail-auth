@@ -23,7 +23,7 @@
 
         </div>
         <div class="mb-3">
-          <label for="descriptopm" class="form-label text-uppercase fw-bold">Description</label>
+          <label for="description" class="form-label text-uppercase fw-bold">Description</label>
           <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}">
         </div>
         @error('description')
